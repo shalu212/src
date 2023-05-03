@@ -1,0 +1,17 @@
+package com.example;
+
+import javax.servlet.http.*;
+import javax.servlet.*;
+
+public class App extends HttpServlet {
+
+  @Override
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+    RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+    rd.forward(request, response);
+  }
+
+}
+
